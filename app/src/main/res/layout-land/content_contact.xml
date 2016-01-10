@@ -46,7 +46,9 @@
                 android:id="@+id/txtName"
                 android:layout_marginLeft="5dp"
                 android:layout_toEndOf="@+id/textView"
-                android:layout_alignBaseline="@+id/textView" />
+                android:layout_alignBaseline="@+id/textView"
+                android:nextFocusDown="@+id/txtEmail"
+                android:hint="Enter Name" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -68,7 +70,8 @@
                 android:layout_alignLeft="@+id/txtName"
                 android:layout_alignStart="@+id/txtName"
                 android:layout_alignBaseline="@+id/textView2"
-                android:layout_marginLeft="5dp" />
+                android:layout_marginLeft="5dp"
+                android:hint="Enter Email" />
         </LinearLayout>
 
         <LinearLayout
@@ -98,7 +101,8 @@
                 android:layout_alignLeft="@+id/txtEmail"
                 android:layout_alignStart="@+id/txtEmail"
                 android:layout_alignBaseline="@+id/textView3"
-                android:layout_marginLeft="5dp" />
+                android:layout_marginLeft="5dp"
+                android:hint="Enter Phone" />
 
             <RadioGroup
                 android:layout_width="match_parent"
