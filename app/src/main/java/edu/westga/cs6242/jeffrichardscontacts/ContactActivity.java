@@ -8,6 +8,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.TextView;
 
 public class ContactActivity extends AppCompatActivity {
 
@@ -48,5 +52,20 @@ public class ContactActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onSave(View v) {
+        EditText name = (EditText)(findViewById(R.id.txtName));
+        EditText email = (EditText)(findViewById(R.id.txtEmail));
+        EditText phone = (EditText)(findViewById(R.id.txtPhone));
+        RadioButton land = (RadioButton)(findViewById(R.id.radLand));
+        RadioButton cell = (RadioButton)(findViewById(R.id.radLand));
+        String phoneType = " (cell)";
+        if (land.isChecked())
+            phoneType = " (land)";
+        TextView result = (TextView)(findViewById(R.id.lblResult));
+        result.setText(name.getText() + "\n" +
+                       email.getText() + "\n" +
+                       phone.getText() + phoneType);
     }
 }
